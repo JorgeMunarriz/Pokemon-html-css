@@ -1,11 +1,10 @@
 import "./App.css";
+import RouterPaths from "./routes/RouterPaths.routes";
 
 function App() {
   return (
     <>
-      <div>
-        <h1>Pokemon</h1>
-      </div>
+      <RouterPaths />
     </>
   );
 }
