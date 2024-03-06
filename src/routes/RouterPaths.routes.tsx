@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { HomePage, Layout, PokemonPageDetail, ProfilePage } from "../pages";
+import { HomePage, Layout, PokemonPageDetail, PokemonsPage, ProfilePage } from "../pages";
 import { ErrorRoute, PrivateRoute, PublicRoute } from "../router";
 
 const RouterPaths = () => {
@@ -12,6 +12,7 @@ const RouterPaths = () => {
           </Route>
           <Route path="/" element={<PrivateRoute />}>
             <Route path="profile" element={<ProfilePage />} />
+            <Route path="pokemons" element={<PokemonsPage/>} />
             <Route path="pokemon/:id" element={<PokemonPageDetail />} />
           </Route>
           <Route path="*" element={<ErrorRoute/>} />
